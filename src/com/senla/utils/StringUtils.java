@@ -22,10 +22,10 @@ public class StringUtils {
     }
 
     public static String[] toUpperCaseFirstLetter(String[] words) {
-        return (String[]) Arrays
+        return Arrays
                 .stream(words)
                 .map(word -> word.substring(0, 1).toUpperCase() + word.substring(1))
-                .toArray();
+                .toArray(String[]::new);
     }
 
     public static int countWordOccurrences(String[] words, String word) {
